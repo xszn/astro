@@ -1,0 +1,30 @@
+{
+  "main": [
+    {
+      "name": "首页",
+      "url": "/"
+    },
+    {
+      "name": "分类",
+      "url": "/categories"
+    },
+    {
+      "name": "标签",
+      "url": "/tags"
+    }
+  ],
+  "footer": [
+    {
+      "name": "关于我们",
+      "url": "/about"
+    },
+    {
+      "name": "联系我们",
+      "url": "/contact"
+    },
+    {
+      "name": "隐私权政策",
+      "url": "/privacy-policy"
+    }
+  ]
+}
