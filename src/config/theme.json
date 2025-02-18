@@ -17,8 +17,8 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Noto+Sans+Mono:wght@100..900",
-      "primary_type": "monospace",
+      "primary": "Mulish:wght@400;600;700",
+      "primary_type": "sans-serif",
       "secondary": "",
       "secondary_type": ""
     },
