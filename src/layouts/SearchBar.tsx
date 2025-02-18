@@ -70,7 +70,7 @@ export default function SearchBar({ searchList }: Props) {
     <div className="min-h-[45vh]">
       <input
         className="form-input w-full text-center"
-        placeholder="在此处输入以搜索帖子"
+        placeholder="点击此处搜索文章"
         type="text"
         name="search"
         value={inputVal}
@@ -82,11 +82,11 @@ export default function SearchBar({ searchList }: Props) {
 
       {inputVal.length > 1 && (
         <div className="my-6 text-center">
-          Found {searchResults?.length}
+          找到 {searchResults?.length}
           {searchResults?.length && searchResults?.length === 1
-            ? " result"
-            : " results"}{" "}
-          for '{inputVal}'
+            ? " 条"
+            : " 条"}
+          “{inputVal}”结果
         </div>
       )}
 
