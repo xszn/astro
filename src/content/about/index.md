@@ -7,14 +7,14 @@ draft: false
 what_i_do:
   title: "创作领域"
   items:
-  - title: "内容撰写"
-    description: "Purus eget ipsum elementum venenatis, quis rutrum mi semper nonpurus eget ipsum elementum venenatis."
+  - title: "文章撰写"
+    description: "简！浅显易懂"
   
-  - title: "视频创作"
-    description: "Aenean maximus urna magna elementum, quis rutrum mi semper non purus eget ipsum venenatis."
+  - title: "视频编辑"
+    description: "短！少说废话"
 
 ---
 
-A content writer with over 12 years experience working across brand identity, publishing and digital products. Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis quis non purus.
+科学上网教程、软件资源网站。最新热门开源软件推荐，浅显易懂的使用教程。在这里发现与掌握前沿科技吧。
 
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis, aenean maximus urna magna elementum.
+内容来源于网络，侵权则删。博客文章与 YouTube 视频同步创作，不定期更新。关注我们，不见不散！
