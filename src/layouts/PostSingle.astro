@@ -7,6 +7,7 @@ import dateFormat from "@/lib/utils/dateFormat";
 import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { BiCalendarEdit, BiCategoryAlt } from "react-icons/bi";
+import Comment from "@/components/Comment.astro";
 
 const allAuthors = await getSinglePage("authors");
 const posts = await getSinglePage("posts");
@@ -119,39 +120,7 @@ const { title, description, authors, categories, image, date, tags } =
         </div>
       </div>
     </article>
-
-    <!-- Disqus 通用代码 -->
-    <div id="disqus_thread"></div>
-    <script>
-      var disqus_config = function () {
-        this.page.url = window.location.href; // 当前页面的 URL
-        this.page.identifier = window.location.pathname; // 当前页面的标识符，通常是路径
-      };
-
-      document.addEventListener("astro:page-load", function () {
-        if (typeof DISQUS !== "undefined") {
-          DISQUS.reset({
-            reload: true,
-            config: function () {
-              this.page.url = window.location.href;
-              this.page.identifier = window.location.pathname;
-            },
-          });
-        } else {
-          // 如果 DISQUS 对象不存在，可能是首次加载，重新初始化 Disqus
-          var d = document,
-            s = d.createElement("script");
-          s.src = "https://xszn.disqus.com/embed.js";
-          s.setAttribute("data-timestamp", +new Date());
-          (d.head || d.body).appendChild(s);
-        }
-      });
-    </script>
-    <noscript
-      >请启用 JavaScript 以查看评论由<a href="https://disqus.com/?ref_noscript"
-        >Disqus 提供。</a
-      ></noscript
-    >
+    <Comment />
   </div>
 </section>
 
