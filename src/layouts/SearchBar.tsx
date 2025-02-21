@@ -36,7 +36,7 @@ export default function SearchBar({ searchList }: Props) {
   const fuse = new Fuse(searchList, {
     keys: ["data.title", "data.categories", "data.tags"],
     includeMatches: true,
-    minMatchCharLength: 2,
+    minMatchCharLength: 1,
     threshold: 0.5,
   });
 
@@ -52,7 +52,7 @@ export default function SearchBar({ searchList }: Props) {
   }, []);
 
   useEffect(() => {
-    let inputResult = inputVal.length > 2 ? fuse.search(inputVal) : [];
+    let inputResult = inputVal.length >= 1 ? fuse.search(inputVal) : [];
     setSearchResults(inputResult);
 
     if (inputVal.length > 0) {
@@ -80,7 +80,7 @@ export default function SearchBar({ searchList }: Props) {
         ref={inputRef}
       />
 
-      {inputVal.length > 1 && (
+      {inputVal.length >= 1 && (
         <div className="my-6 text-center">
           找到 {searchResults?.length}
           {searchResults?.length && searchResults?.length === 1

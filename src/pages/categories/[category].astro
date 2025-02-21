@@ -6,6 +6,7 @@ import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
 import { humanize } from "@/lib/utils/textConverter";
+import config from "@/config/config.json";
 
 export async function getStaticPaths() {
   const categories = await getTaxonomy("posts", "categories");
@@ -24,9 +25,11 @@ const filterByCategory = taxonomyFilter(posts, "categories", category);
 const sortedPosts = sortByDate(filterByCategory);
 
 const title = humanize(category || "");
+
+const titleTemplate = config.site.title_template;
 ---
 
-<Base title={title || "Category"}>
+<Base title={title + " | " + titleTemplate || "Category"}>
   <div class="section">
     <div class="container">
       <p class="text-center text-2xl mb-4">显示文章来自</p>

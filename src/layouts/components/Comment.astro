@@ -5,6 +5,10 @@
 <!-- Disqus 通用代码 -->
 <div id="disqus_thread"></div>
 <script>
+  import config from "@/config/config.json";
+
+  const shortName = config.comments.short_name;
+
   var disqus_config = function () {
     this.page.url = window.location.href; // 当前页面的 URL
     this.page.identifier = window.location.pathname; // 当前页面的标识符，通常是路径
@@ -23,7 +27,8 @@
       // 如果 DISQUS 对象不存在，可能是首次加载，重新初始化 Disqus
       var d = document,
         s = d.createElement("script");
-      s.src = "https://xszn.disqus.com/embed.js";
+      s.src = `https://${shortName}.disqus.com/embed.js`;
+
       s.setAttribute("data-timestamp", +new Date());
       (d.head || d.body).appendChild(s);
     }

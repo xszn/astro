@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import SearchBar from "@/layouts/SearchBar";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import config from "@/config/config.json";
 
 // Retrieve all articles
 const posts = await getSinglePage("posts");
@@ -12,9 +13,11 @@ const searchList = posts.map((item: any) => ({
   data: item.data,
   content: item.body,
 }));
+
+const titleTemplate = config.site.title_template;
 ---
 
-<Base title={`Search`}>
+<Base title={`搜索` + " | " + titleTemplate}>
   <section class="section">
     <div class="container">
       <SearchBar client:load searchList={searchList} />

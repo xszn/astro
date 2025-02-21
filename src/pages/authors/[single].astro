@@ -9,6 +9,8 @@ import { sortByDate } from "@/lib/utils/sortFunctions";
 import { humanize, slugify } from "@/lib/utils/textConverter";
 import { BiCalendarEdit, BiCategoryAlt } from "react-icons/bi";
 
+import config from "@/config/config.json";
+
 export async function getStaticPaths() {
   const authors = await getSinglePage("authors");
 
@@ -32,10 +34,12 @@ const currentPosts = sortPostsByDate.filter((post) => {
     .map((author: string) => slugify(author))
     .includes(slugify(title));
 });
+
+const titleTemplate = config.site.title_template;
 ---
 
 <Base
-  title={title}
+  title={title + " | " + titleTemplate}
   meta_title={meta_title}
   description={description}
   image={image}
