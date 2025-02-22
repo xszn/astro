@@ -1,5 +1,5 @@
 ---
-title: Mark Dinn
+title: Admin
 image: /images/authors/mark-dinn.webp
 description: this is meta description
 social:

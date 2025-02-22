@@ -8,6 +8,7 @@ import similerItems from "@/lib/utils/similarItems";
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { BiCalendarEdit, BiCategoryAlt } from "react-icons/bi";
 import Comment from "@/components/Comment.astro";
+import CreativeCommons from "@/components/CreativeCommons.astro";
 
 const allAuthors = await getSinglePage("authors");
 const posts = await getSinglePage("posts");
@@ -95,6 +96,9 @@ const { title, description, authors, categories, image, date, tags } =
       <div class="md:col-10">
         <div class="content mb-16 text-left">
           <Content />
+          <div class="text-center bg-gray-100 p-4 rounded-lg">
+            <CreativeCommons />
+          </div>
         </div>
         <div class="flex flex-wrap items-center justify-between">
           <ul class="mr-4 mb-4 space-x-3">
