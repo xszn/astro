@@ -1,0 +1,35 @@
+<div id="disqus_thread"></div>
+<script>
+  import config from "@/config/config.json";
+
+  const shortName = config.comments.short_name;
+
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+  };
+
+  document.addEventListener("astro:page-load", function () {
+    if (typeof DISQUS !== "undefined") {
+      DISQUS.reset({
+        reload: true,
+        config: function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
+        },
+      });
+    } else {
+      var d = document,
+        s = d.createElement("script");
+      s.src = `https://${shortName}.disqus.com/embed.js`;
+
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+<noscript
+  >请启用 JavaScript 以查看评论由<a href="https://disqus.com/?ref_noscript"
+    >Disqus 提供。</a
+  ></noscript
+>

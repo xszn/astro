@@ -1,0 +1,24 @@
+---
+import Base from "@/layouts/Base.astro";
+import SearchBar from "@/layouts/SearchBar";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import config from "@/config/config.json";
+
+// Retrieve all articles
+const posts = await getSinglePage("posts");
+
+// List of items to search in
+const searchList = posts.map((item) => ({
+  slug: item.id,
+  data: item.data,
+  content: item.body,
+}));
+---
+
+<Base title={`搜索` + config.site.titleDelimiter}>
+  <section class="section">
+    <div class="container">
+      <SearchBar client:load searchList={searchList} />
+    </div>
+  </section>
+</Base>
