@@ -8,11 +8,11 @@ what_i_do:
   title: "内容创作"
   items:
   - title: "文章撰写"
-    description: "Purus eget ipsum elementum venenatis, quis rutrum mi semper nonpurus eget ipsum elementum venenatis."
+    description: "撰写内容不拘"
   
   - title: "视频编辑"
-    description: "Aenean maximus urna magna elementum, quis rutrum mi semper non purus eget ipsum venenatis."
+    description: "原创影片创作"
 
 ---
 
-简介
+科学上网教程、软件资源网站。最新热门开源软件推荐，浅显易懂的使用教程。在这里发现与掌握前沿技术。
