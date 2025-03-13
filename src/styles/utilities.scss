@@ -3,10 +3,40 @@ strong {
   @apply font-semibold;
 }
 
+// 图片
+
 img {
   @apply inline-block;
 }
 
+p img {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgb(22 28 45 / 10%);
+  display: block;
+  margin: 0 auto;
+}
+
+.content :where(img):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .shadow {
   box-shadow: 0 10px 30px rgb(22 28 45 / 10%);
+}
+
+// 代码
+
+.content ::before {
+  content: none;
+}
+
+.content ::after {
+  content: none;
+}
+
+code {
+  background-color: rgb(22 28 45 / 10%);
+  padding: .125rem .375rem;
+  border-radius: .25rem;
 }

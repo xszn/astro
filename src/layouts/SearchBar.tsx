@@ -84,7 +84,7 @@ export default function SearchBar({ searchList }: Props) {
         <div className="my-6 text-center">
           找到 {searchResults?.length}
           {searchResults?.length && searchResults?.length === 1
-            ? " result"
+            ? " 个"
             : " 个"}
           关于“{inputVal}”的结果
         </div>

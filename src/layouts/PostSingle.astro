@@ -9,6 +9,7 @@ import { Image } from "astro:assets";
 import { render } from "astro:content";
 import { BiCalendarEdit, BiCategoryAlt } from "react-icons/bi";
 import Comment from "@/components/Comment.astro";
+import Notice from "@/shortcodes/Notice";
 
 const allAuthors = await getSinglePage("authors");
 const posts = await getSinglePage("posts");
@@ -22,8 +23,8 @@ const { title, description, authors, categories, image, date, tags } =
 <section class="section">
   <div class="container">
     <article class="row justify-center">
-      <div class="md:col-10 text-center">
-        <h1 set:html={markdownify(title)} class="h2" />
+      <div class="md:col-12 text-center">
+        <h1 set:html={markdownify(title)} class="h1" />
         <ul class="mt-4 flex flex-wrap items-center justify-center text-text">
           <li class="mx-3">
             {
@@ -95,6 +96,27 @@ const { title, description, authors, categories, image, date, tags } =
       <div class="md:col-10">
         <div class="content mb-16 text-left">
           <Content />
+          <Notice type="tip">
+            <p
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:dct="http://purl.org/dc/terms/"
+            >
+              <a
+                property="dct:title"
+                rel="cc:attributionURL"
+                href="https://xszn.org/about/">软件资源分享</a
+              > by <a
+                rel="cc:attributionURL dct:creator"
+                property="cc:attributionName"
+                href="https://xszn.org/">行书指南</a
+              > is licensed under <a
+                href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1"
+                target="_blank"
+                rel="license noopener noreferrer"
+                style="display:inline-block;">CC BY-NC-ND 4.0</a
+              >
+            </p>
+          </Notice>
         </div>
         <div class="flex flex-wrap items-center justify-between">
           <ul class="mr-4 mb-4 space-x-3">
@@ -129,7 +151,7 @@ const { title, description, authors, categories, image, date, tags } =
   similarPosts.length > 0 && (
     <section class="section pt-0">
       <div class="container">
-        <h2 class="mb-8 text-center h3">Similar Posts</h2>
+        <h2 class="mb-8 text-center h2">Similar Posts</h2>
         <SimilarPosts posts={similarPosts.slice(0, 3)} />
       </div>
     </section>

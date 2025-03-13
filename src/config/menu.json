@@ -13,16 +13,16 @@
       "url": "/tags"
     },
     {
-      "name": "Pages",
+      "name": "页面",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Authors",
+          "name": "作者",
           "url": "/authors"
         },
         {
-          "name": "Elements",
+          "name": "示例",
           "url": "/elements"
         }
       ]
