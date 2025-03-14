@@ -1,7 +1,7 @@
 ---
 title: "关于我们"
 meta_title: "关于我们"
-image: "/images/author.webp
+image: "/images/author.webp"
 draft: false
 
 what_i_do:
