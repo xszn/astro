@@ -1,0 +1,55 @@
+---
+title: "IDM Activation Script：IDM 激活工具，轻松永久免费使用"
+meta_title: "IDM Activation Script：IDM 激活工具，轻松永久免费使用"
+description: "Internet Download Manager（IDM）是一款 Windows 平台上流行的下载工具。不过，IDM 有 30 天的试用期，到期后需要付费购买。为了能够继续免费使用，可以使用 IDM 激活脚本来冻结试用期，达到永久免费使用的目的。"
+date: 2025-03-24T11:36:40Z
+image: "/images/posts/2025/03/24/idm-activation-script.webp"
+categories: ["实用工具"]
+authors: ["John Doe"]
+tags: ["开源软件","脚本"]
+draft: false
+---
+
+Internet Download Manager（IDM）是一款 Windows 平台上流行的下载工具。不过，IDM 有 30 天的试用期，到期后需要付费购买。为了能够继续免费使用，可以使用 IDM 激活脚本来冻结试用期，达到永久免费使用的目的。
+
+## IDM Activation Script 使用教程
+
+IDM Activation Script 是一个开源的命令行及窗口化工具，可以激活 IDM 下载管理器。它可以重置 IDM 的试用期，即使 IDM 更新后，激活信息仍然有效。该脚本支持 Windows 7/8/8.1/10/11 等操作系统。
+
+### 推荐方法
+
+打开 PowerShell。右键单击 Windows 开始菜单，选择 PowerShell 或终端管理员（不是 CMD）。
+
+运行脚本。复制并粘贴以下命令到 PowerShell 窗口中，然后按回车键：
+
+```powershell
+iex(irm is.gd/idm_reset)
+```
+
+按照提示操作。在出现的“IDM Activation Script”窗口中，按照说明进行操作即可。建议选择“Freeze Trial”选项来锁定 30 天试用期。
+
+[![](/images/posts/2025/03/24/idm-activation-script-window.webp)](/images/posts/2025/03/24/idm-activation-script-window.webp)
+
+以下为 IDM 30 天试用期已成功冻结为终身试用期截图。
+
+[![](/images/posts/2025/03/24/idm-activation-script-freeze-trial.webp)](/images/posts/2025/03/24/idm-activation-script-freeze-trial.webp)
+
+<Notice type="info">如果无法连接到远程服务器，可以尝试使用代理软件开 Tun 模式。如何开 Tun 模式请移步《[Clash Verge Rev 使用教程](/2025/03/clash-verge-rev)》。</Notice>
+
+#### 备用方法
+
+下载脚本。从 GitHub [下载 IDM Activation Script][2]。
+
+运行脚本。找到下载的 `IAS.cmd` 文件，右键单击并选择“以管理员身份运行”。
+
+选择操作。按照脚本提示，选择“Freeze Trial”选项来冻结试用期。
+
+IDM Activation Script 是一个实用的工具，可以帮助用户免费使用 IDM。按照上述步骤操作，即可轻松冻结 IDM 的试用期。建议使用 PowerShell 方法，并定期更新脚本以获得最佳效果。
+
+**参考资料**
+
+1. [lstprjct/IDM-Activation-Script: IDM Activation & Trail Reset Script - GitHub][1]
+2. [Releases · lstprjct/IDM-Activation-Script - GitHub][2]
+
+[1]: https://github.com/lstprjct/IDM-Activation-Script
+[2]: https://github.com/lstprjct/IDM-Activation-Script/releases
