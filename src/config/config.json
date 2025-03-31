@@ -5,7 +5,7 @@
     "base_url": "https://xszn.org/",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.ico",
+    "favicon": "/favicon.ico",
     "logo": "/images/logo.webp",
     "logo_width": "48",
     "logo_height": "48",
