@@ -9,14 +9,6 @@ img {
   @apply inline-block;
 }
 
-p img {
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 30px rgb(22 28 45 / 10%);
-  display: block;
-  margin: 0 auto;
-  padding: 8px;
-}
-
 .content :where(img):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   margin-top: 0;
   margin-bottom: 0;
