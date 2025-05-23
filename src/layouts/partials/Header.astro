@@ -18,7 +18,9 @@ export interface NavigationLink {
 const { main }: { main: NavigationLink[] } = menu;
 ---
 
-<header class="header pt-6">
+<header
+  class="header py-6 fixed top-0 left-0 right-0 z-40 bg-gray-50 bg-opacity-50 backdrop-blur-lg"
+>
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
@@ -65,7 +67,7 @@ const { main }: { main: NavigationLink[] } = menu;
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </span>
-                <ul class="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
+                <ul class="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 bg-gray-50 bg-opacity-50 backdrop-blur-lg">
                   {menu.children?.map((child) => (
                     <li class="nav-dropdown-item">
                       <a href={child.url} class="nav-dropdown-link">
@@ -86,7 +88,7 @@ const { main }: { main: NavigationLink[] } = menu;
         ))
       }
     </ul>
-    <div class="order-1 ml-auto flex md:order-2 md:ml-0">
+    <div class="order-1 ml-auto flex md:order-2 md:ml-0 md:w-[220px]">
       <a
         class="mr-4 inline-block cursor-pointer p-2 text-xl text-dark transition hover:text-primary md:mr-0"
         href="/search"
