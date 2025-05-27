@@ -14,7 +14,7 @@ type PageData = {
 };
 
 export const getSinglePage = async <C extends CollectionKey>(
-  collectionName: C
+  collectionName: C,
 ): Promise<CollectionEntry<C>[]> => {
   const allPages = await getCollection(collectionName);
 
@@ -24,6 +24,10 @@ export const getSinglePage = async <C extends CollectionKey>(
     const pageData = data.data as PageData;
     return pageData.draft !== true;
   });
+
+  // const only2025 = removeDrafts.filter((data) => data.id.startsWith("2025/"));
+
+  // return only2025;
 
   return removeDrafts;
 };

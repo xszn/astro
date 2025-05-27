@@ -5,6 +5,10 @@
       "url": "/"
     },
     {
+      "name": "测试",
+      "url": "/test"
+    },
+    {
       "name": "分类",
       "url": "/categories"
     },
