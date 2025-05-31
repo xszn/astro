@@ -1,7 +1,7 @@
 ---
 title: "Clash Verge Rev：代理软件推荐，解锁网络自由神器"
 meta_title: "Clash Verge Rev：代理软件推荐，解锁网络自由神器"
-description: "Clash Verge 是一个帮你科学上网的工具，界面好看又好用，支持 Windows、macOS 和 Linux。它内置了 Clash.Meta 内核，还能切换成 `Alpha` 版本内核。不管你是新手还是老手，都能轻松上手。下面我就用最简单的方式，教你如何用 Clash Verge。"
+description: "Clash Verge 是一款界面美观、操作简单的科学上网工具，支持 Windows、macOS 和 Linux 系统，内置 Clash.Meta 内核并可切换 Alpha 版本。适合新手和老手使用，Windows 用户建议用 x64 版本，Win7 不支持。软件自带 Webview2 环境，GitHub 提供正式版和测试版下载，还有详细安装和使用教程，支持多种代理协议，方便快速配置和使用。"
 date: 2025-03-23T06:36:47Z
 image: "/images/posts/2025/03/23/clash-verge-rev.webp"
 categories: ["工具"]
@@ -10,72 +10,77 @@ tags: ["开源软件"]
 draft: false
 ---
 
-Clash Verge 是一个帮你科学上网的工具，界面好看又好用，支持 Windows、macOS 和 Linux。它内置了 Clash.Meta 内核，还能切换成 `Alpha` 版本内核。不管你是新手还是老手，都能轻松上手。下面我就用最简单的方式，教你如何用 Clash Verge。
+Clash Verge 是一款界面美观、操作简单的科学上网工具，支持 Windows、macOS 和 Linux 系统，内置 Clash.Meta 内核并可切换 Alpha 版本。适合新手和老手使用，Windows 用户建议用 x64 版本，Win7 不支持。软件自带 Webview2 环境，GitHub 提供正式版和测试版下载，还有详细安装和使用教程，支持多种代理协议，方便快速配置和使用。
 
 ## Clash Verge Rev 使用教程
 
-Windows 用户建议使用 x64 包，Win7 不再支持，需升级到 Win10/11 或使用 Linux。软件内置 Webview2 环境，适合缺少该环境的系统。GitHub Releases 提供正式版和测试版下载，并有常见问题解答和源码编译指南。
+<Notice type="note">视频教程请移步 YouTube 观看《[Clash Verge Rev 使用教程](https://youtu.be/AVGxxb8EPlk)》。</Notice>
 
-<Notice type="note">观看视频教程请移步：https://youtu.be/AVGxxb8EPlk</Notice>
+### 下载
 
-### 下载和安装
+<Button label="Clash Verge Rev 下载" link="https://www.clashverge.dev/install.html" style="solid" />
 
-去 [Clash Verge 的官网][1]或 [GitHub 下载](https://github.com/clash-verge-rev/clash-verge-rev/releases)安装包。Windows 下双击 `.exe` 文件安装，macOS 下拖拽 `.dmg` 文件到应用文件夹，Linux 下给 `.AppImage` 文件权限后运行。安装完打开，界面很清爽。
-
-[![Clash Verge Rev 下载和安装-安装](/images/posts/2025/03/23/clash-verge-rev-an-zhuang.webp)](/images/posts/2025/03/23/clash-verge-rev-an-zhuang.webp)
-
-### 导入订阅
-
-订阅就是你的节点信息，可以从机场（服务商）或自己搭建的订阅链接获取。打开 Clash Verge，点左侧的 `订阅`。选择用 URL（粘贴订阅链接）导入。导入后，配置文件会显示在列表里，点一下就能用。
-
-[![Clash Verge Rev 下载和安装-导入订阅](/images/posts/2025/03/23/clash-verge-rev-dao-ru-ding-yue.webp)](/images/posts/2025/03/23/clash-verge-rev-dao-ru-ding-yue.webp)
-
-### 选节点和模式
-
-选节点。点左侧的 `代理`，在代理组里选一个节点，点一下就能切换。
-
-选模式。在右上角的模式里选：
+### 安装
 
 <Tabs client:load>
-<Tab name="规则">
-按规则走代理，适合日常上网。
-</Tab>
-<Tab name="全局">
-所有流量都走代理。
-</Tab>
-<Tab name="直连">
-所有流量都不走代理。
-</Tab>
+    <Tab name="Windows">
+        双击 `.exe` 文件安装。
+    </Tab>
+    <Tab name="macOS">
+        拖拽 `.dmg` 文件到应用文件夹。
+    </Tab>
+    <Tab name="Linux">
+        给 `.AppImage` 文件权限后运行。
+    </Tab>
 </Tabs>
 
-[![Clash Verge Rev 下载和安装-选节点和模式](/images/posts/2025/03/23/clash-verge-rev-xuan-jie-dian-he-mo-shi.webp)](/images/posts/2025/03/23/clash-verge-rev-xuan-jie-dian-he-mo-shi.webp)
+### 使用教程
 
-### 开代理或 Tun 模式
+<Image
+    src="/images/posts/2025/03/23/clash-verge-rev-gui.webp"
+    alt="Clash Verge Rev 界面"
+/>
 
-系统代理。点左侧的 `设置`。打开 `系统代理` 开关，Clash Verge 会自动设置系统代理。
+**1. 导入订阅**
 
-Tun 模式。点左侧的 `设置`。打开 `Tun 模式` 开关，适合游戏或命令行工具等复杂场景。
+订阅是节点信息，打开 Clash Verge 左侧 `订阅` 用 URL 导入链接，导入后配置文件显示列表，点击即可使用。
 
-[![Clash Verge Rev 开代理或 Tun 模式-开代理](/images/posts/2025/03/23/clash-verge-rev-kai-dai-li.webp)](/images/posts/2025/03/23/clash-verge-rev-kai-dai-li.webp)
+<Image
+    src="/images/posts/2025/03/23/clash-verge-rev-dao-ru-ding-yue.webp"
+    alt="Clash Verge Rev 导入订阅"
+/>
 
-### 其他功能
+**2. 选择节点和模式**
 
-配置文件管理。可以编辑、复制、删除配置文件。
+点左侧的 `代理`，在代理组里选一个节点，点一下就能切换。
 
-WebDav 备份。用 WebDav 服务备份和同步配置。
+在右上角的模式里选：
 
-可视化编辑。通过图形界面编辑节点和规则，操作更直观。
+- `规则`：按规则走代理，适合日常上网。
+- `全局`：所有流量都走代理。
+- `直连`：所有流量都不走代理。
 
-[![Clash Verge Rev 开代理或 Tun 模式-其他功能](/images/posts/2025/03/23/clash-verge-rev-qi-ta-gong-neng.webp)](/images/posts/2025/03/23/clash-verge-rev-qi-ta-gong-neng.webp)
+<Image
+    src="/images/posts/2025/03/23/clash-verge-rev-xuan-ze-mo-shi.webp"
+    alt="Clash Verge Rev 选择模式"
+/>
 
-Clash Verge 是一个简单又好用的科学上网工具。通过这篇教程，你已经学会了怎么下载安装、导入订阅、选节点和模式、开代理或 Tun 模式。用它上网更自由，也更安全。如果有问题，可以去 GitHub 上找答案或提建议。快去试试吧！
+**3. 开启代理**
+
+点左侧的 `设置`，开启代理或 Tun 模式：
+
+- `系统代理`：Clash Verge 会自动设置系统代理。
+- `Tun 模式`：开关，适合游戏或命令行工具等复杂场景。
+
+<Image
+    src="/images/posts/2025/03/23/clash-verge-rev-kai-qi-dai-li.webp"
+    alt="Clash Verge Rev 开启代理"
+/>
+
+Clash Verge 是一个简单又好用的科学上网工具。用它上网更自由，也更安全。如果有问题，可以去 GitHub 上找答案或提建议。
 
 **参考资料**
 
-1. [简介 - Clash Verge Rev Docs][1]
-2. [快速入门 - Clash Verge Rev Docs][2]
-3. [clash-verge-rev/clash-verge-rev: A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience - GitHub][3]
-
-[1]: https://www.clashverge.dev/
-[2]: https://www.clashverge.dev/guide/quickstart.html
-[3]: https://github.com/clash-verge-rev/clash-verge-rev
+1. [简介 - Clash Verge Rev Docs](https://www.clashverge.dev/)
+2. [快速入门 - Clash Verge Rev Docs](https://www.clashverge.dev/guide/quickstart.html)
+3. [Clash Verge Rev GitHub](https://github.com/clash-verge-rev/clash-verge-rev)

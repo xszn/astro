@@ -18,33 +18,30 @@ Microsoft Activation Scripts（MAS）是一个开源工具，帮助用户激活 
 
 ### 下载
 
-MAS 提供两种下载方式：
+``` powershell
+irm https://get.activated.win | iex
+```
 
-1. **PowerShell 方法（推荐）**
+或
 
-    - 打开 PowerShell 或终端（右键点击开始菜单选择 PowerShell 或终端）。
-    - 输入以下命令并按回车：
-    ``` powershell
-    irm https://get.activated.win | iex
-    ```
-    - 如果上述命令无法使用，可尝试备用命令：
-    ``` powershell
-    irm https://massgrave.dev/get | iex
-    ```
-    - 下载完成后，您将看到激活选项。
+``` powershell
+irm https://massgrave.dev/get | iex
+```
 
-2. **传统方法**
+或
 
-    - 从以下链接下载 ZIP 文件：
-    ``` http
-    https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip
-    ```
-    - 解压 ZIP 文件后，进入名为 `All-In-One-Version` 的文件夹。
-    - 找到并运行 `MAS_AIO.cmd` 文件。
+<Button label="Microsoft Activation Scripts 下载" link="https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip" style="solid" />
 
 ### 安装
 
-MAS 不需要复杂安装，只需运行下载的脚本即可开始使用。对于 PowerShell 方法，直接执行上述命令；对于传统方法，运行解压后的脚本文件即可。
+<Tabs client:load>
+    <Tab name="PowerShell">
+        PowerShell 方法只需直接复制粘贴并执行指定命令即可完成操作。
+    </Tab>
+    <Tab name="命令脚本">
+        只需运行解压后的脚本文件即可。
+    </Tab>
+</Tabs>
 
 ### 使用说明
 
@@ -53,25 +50,19 @@ MAS 不需要复杂安装，只需运行下载的脚本即可开始使用。对�
     alt="Microsoft Activation Scripts 界面"
 />
 
-1. **选择激活选项**
+**选择激活选项**
 
-    在 PowerShell 或传统方法中运行脚本后，根据提示选择激活方式：
-    - 按 `1` 激活 Windows（HWID 方法）。
-    - 按 `2` 激活 Office（Ohook 方法）。
+运行脚本后，根据提示选择所需的激活方式完成激活：
 
-2. **故障排除**
-
-    如果脚本未能正常运行，请检查以下几点：
-    - 确保 URL 来源安全可靠。
-    - 如果 PowerShell 方法失败，可尝试传统方法。
-    - 查看脚本中的蓝色文字提示以获取故障排除步骤。
+- 按 `1` 激活 Windows（HWID 方法）。
+- 按 `2` 激活 Office（Ohook 方法）。
 
 <Image 
-  src="/images/posts/2025/04/13/microsoft-activation-scripts-hwid.webp" 
+  src="/images/posts/2025/04/13/microsoft-activation-scripts-windows-ji-huo.webp" 
   alt="MAS Windows 激活" 
 />
 <Image
-    src="/images/posts/2025/04/13/microsoft-activation-scripts-ohook.webp"
+    src="/images/posts/2025/04/13/microsoft-activation-scripts-office-ji-huo.webp"
     alt="MAS Office 激活"
 />
 
@@ -82,7 +73,7 @@ MAS 是一款免费、高效的激活工具，支持 Windows 和 Office 的多�
 1. [Microsoft Activation Scripts 官网][1]
 2. [HWID Activation - MAS][2]
 3. [Ohook Activation - MAS][3]
-4. [Microsoft Activation Scripts - GitHub][4]
+4. [Microsoft Activation Scripts GitHub][4]
 
 [1]: https://massgrave.dev/
 [2]: https://massgrave.dev/hwid

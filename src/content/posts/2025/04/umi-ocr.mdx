@@ -14,27 +14,22 @@ Umi-OCR 是一款免费开源的离线文字识别软件，支持多语言和批
 
 ## Umi-OCR 使用教程
 
-<Notice type="note">视频教程请移步 YouTube 观看《[Umi-OCR 使用教程](https://youtu.be/jCkAg3s-BMo)》</Notice>
+<Notice type="note">视频教程请移步 YouTube 观看《[Umi-OCR 使用教程](https://youtu.be/jCkAg3s-BMo)》。</Notice>
 
 ### 下载
 
-<Button label="Umi-OCR 下载" link="https://hiroi-sora.lanzoul.com/s/umi-ocr" style="solid" />
-<Button label="Umi-OCR GitHub 下载" link="https://github.com/hiroi-sora/Umi-OCR/releases/latest" style="solid" />
-<Button label="Umi-OCR SourceForge 下载" link="https://sourceforge.net/projects/umi-ocr/" style="solid" />
+<Button label="Umi-OCR 下载" link="https://github.com/hiroi-sora/Umi-OCR/tree/v2.1.5?tab=readme-ov-file#%E4%B8%8B%E8%BD%BD%E5%8F%91%E8%A1%8C%E7%89%88" style="solid" />
 
 ### 安装
 
-**1. 解压软件包**  
-- 普通 `.7z` 文件需用压缩软件解压。
-- `.7z.exe` 自解压包，双击即可自动解压，无需额外工具。
-
-**2. 启动程序**  
-- 无需安装，解压后直接双击 `Umi-OCR.exe` 启动。
-- Linux 用户可运行 `umi-ocr.sh` 脚本。
-
-**3. 首次设置**  
-- 软件会根据系统语言自动切换界面语言。
-- 可在“全局设置”中手动切换语言、调整主题、字体等。
+<Tabs client:load>
+   <Tab name="Windows">
+      解压软件包，无需安装，直接双击 `Umi-OCR.exe` 启动。
+   </Tab>
+   <Tab name="Linux">
+      Linux 用户可运行 `umi-ocr.sh` 脚本启动。
+   </Tab>
+</Tabs>
 
 ### 使用说明
 
@@ -43,54 +38,54 @@ Umi-OCR 是一款免费开源的离线文字识别软件，支持多语言和批
    alt="Umi-OCR 界面"
 />
 
-**1. 截图 OCR**
+**截图 OCR**
 
-- 通过快捷键或界面按钮，快速截图识别图片中的文字。
-- 支持复制、编辑识别结果，支持多条识别历史记录管理。
-- 可粘贴图片到软件窗口直接识别。
-
-<Image
-   src="/images/posts/2025/04/22/umi-ocr-jie-tu.webp"
-   alt="Umi-OCR 截图"
-/>
-
-**2. 批量 OCR**
-
-- 支持批量导入本地图片（jpg、png、webp 等格式），一次性识别大量文件。
-- 识别结果可导出为 txt、csv、jsonl、md 等格式。
-- 支持“忽略区域”设置，排除水印、LOGO 等干扰内容。
+- 通过快捷键或界面按钮，快速截图识别图片中的文字
+- 支持复制、编辑识别结果，支持多条识别历史记录管理
+- 可粘贴图片到软件窗口直接识别
 
 <Image
-   src="/images/posts/2025/04/22/umi-ocr-pi-liang.webp"
-   alt="Umi-OCR 批量"
+   src="/images/posts/2025/04/22/umi-ocr-jie-tu-ocr.webp"
+   alt="Umi-OCR 截图 OCR"
 />
 
-**3. 文档识别**
+**批量 OCR**
 
-- 支持 PDF、xps、epub、mobi 等格式文档的 OCR 识别。
-- 可输出为双层可搜索 PDF，便于后续检索。
-- 支持设置忽略区域，自动关机/休眠等任务选项。
+- 支持批量导入本地图片（jpg、png、webp 等格式），一次性识别大量文件
+- 识别结果可导出为 txt、csv、jsonl、md 等格式
+- 支持“忽略区域”设置，排除水印、LOGO 等干扰内容
+
+<Image
+   src="/images/posts/2025/04/22/umi-ocr-pi-liang-ocr.webp"
+   alt="Umi-OCR 批量 OCR"
+/>
+
+**文档识别**
+
+- 支持 PDF、xps、epub、mobi 等格式文档的 OCR 识别
+- 可输出为双层可搜索 PDF，便于后续检索
+- 支持设置忽略区域，自动关机/休眠等任务选项
 
 <Image
    src="/images/posts/2025/04/22/umi-ocr-pi-liang-wen-dang.webp"
    alt="Umi-OCR 批量文档"
 />
 
-**4. 二维码功能**
+**二维码功能**
 
-- 支持识别图片中的二维码、条形码（19 种协议）。
-- 支持输入文本生成二维码图片，支持纠错等级设置。
+- 支持识别图片中的二维码、条形码（19 种协议）
+- 支持输入文本生成二维码图片，支持纠错等级设置
 
 <Image
    src="/images/posts/2025/04/22/umi-ocr-er-wei-ma.webp"
    alt="Umi-OCR 二维码"
 />
 
-**5. 全局设置与高级用法**
+**全局设置与高级用法**
 
-- 支持多语言界面、主题切换、快捷方式添加、开机自启等。
-- 支持命令行和 HTTP 接口，便于开发者二次集成和自动化调用。
-- 可切换不同 OCR 引擎插件，满足不同性能和兼容性需求。
+- 支持多语言界面、主题切换、快捷方式添加、开机自启等
+- 支持命令行和 HTTP 接口，便于开发者二次集成和自动化调用
+- 可切换不同 OCR 引擎插件，满足不同性能和兼容性需求
 
 <Image
    src="/images/posts/2025/04/22/umi-ocr-quan-ju-she-zhi.webp"
@@ -101,6 +96,4 @@ Umi-OCR 功能丰富，支持截图、批量、文档和二维码等文字识别
 
 **参考资料**
 
-1. [Umi-OCR GitHub][1]
-
-[1]: https://github.com/hiroi-sora/Umi-OCR
+1. [Umi-OCR GitHub](https://github.com/hiroi-sora/Umi-OCR)
