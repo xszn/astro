@@ -1,35 +1,16 @@
-<div id="disqus_thread"></div>
-<script>
-  import config from "@/config/config.json";
-
-  const shortName = config.comments.short_name;
-
-  var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = window.location.pathname;
-  };
-
-  document.addEventListener("astro:page-load", function () {
-    if (typeof DISQUS !== "undefined") {
-      DISQUS.reset({
-        reload: true,
-        config: function () {
-          this.page.url = window.location.href;
-          this.page.identifier = window.location.pathname;
-        },
-      });
-    } else {
-      var d = document,
-        s = d.createElement("script");
-      s.src = `https://${shortName}.disqus.com/embed.js`;
-
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
-</script>
-<noscript
-  >请启用 JavaScript 以查看评论由<a href="https://disqus.com/?ref_noscript"
-    >Disqus 提供。</a
-  ></noscript
->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="xszn/xszn.github.io"
+  data-repo-id="R_kgDON7SifQ"
+  data-category="General"
+  data-category-id="DIC_kwDON7Sifc4Cq7dI"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async
+></script>
