@@ -1,0 +1,100 @@
+---
+title: "LX Music：音乐搜索器，免费畅享全网音乐"
+meta_title: "LX Music：音乐搜索器，免费畅享全网音乐"
+description: "LX Music 是一款免费、无广告且开源的音乐播放器，支持 Windows、macOS、Linux 和 Android 多平台。它基于 React、Electron 和 Vue 技术开发，界面简洁，操作方便，支持高品质音乐播放和下载。LX Music 内置多音乐源，提供智能搜索、歌词显示和播放列表管理，适合音乐爱好者和技术学习者。虽然不支持 iOS，但它鼓励用户参与开源社区，共同推动软件发展，致力于打造纯净、高效的音乐体验平台。"
+date: 2025-05-31T19:25:00Z
+image: "/images/posts/2025/05/31/lx-music.webp"
+categories: ["音乐"]
+authors: ["John Doe"]
+tags: ["开源软件"]
+draft: false
+---
+
+随着数字音乐的普及，越来越多的用户希望能够方便快捷地收听和管理自己喜欢的音乐。LX Music（洛雪音乐助手）作为一款免费开源的音乐播放软件，凭借其强大的功能和跨平台支持，成为了许多音乐爱好者的首选。它不仅支持 Windows、Mac、Linux 等主流桌面系统，还提供 Android 移动端版本，满足不同用户的使用需求。
+
+## LX Music 使用教程
+
+<Notice type="note">视频教程正在创作，请期待……</Notice>
+
+## 下载
+
+<Button label="LX Music 下载" link="https://lxmusic.toside.cn/download" style="solid" />
+
+## 安装
+
+<Tabs client:load>
+    <Tab name="Windows">
+        建议运行安装程序时选择 `仅为我安装`。
+    </Tab>
+    <Tab name="macOS">
+        双击打开并将应用图标拖入 `应用程序` 文件夹。
+    </Tab>
+    <Tab name="Linux">
+        需赋予其执行权限（如使用 `chmod` 命令）。
+    </Tab>
+    <Tab name="Android">
+        打开手机 `设置` 允许安装未知来源应用。
+    </Tab>
+</Tabs>
+
+## 使用说明
+
+<Image
+    src="/images/posts/2025/05/31/lx-music-gui.webp"
+    alt="LX Music 界面"
+/>
+
+**1. 导入自定义音源**
+
+LX Music 默认不内置音乐源，需要导入自定义音源 JS 脚本：
+
+打开软件，进入 `设置` > `基本设置` > `自定义源` > `自定义源管理`。
+
+选择 `在线导入` 或 `本地导入`，导入音源脚本。
+
+选择导入的音源，等待“初始化成功”提示。
+
+<Image
+    src="/images/posts/2025/05/31/lx-music-zi-ding-yi-yuan.gif"
+    alt="LX Music 自定义源"
+/>
+
+<Notice type="note">更多音源请移步《[洛雪音乐源](https://github.com/pdone/lx-music-source)》。</Notice>
+
+**2. 搜索与播放音乐**
+
+在搜索框输入歌曲名、歌手或专辑名；选择搜索结果，点击播放即可。
+
+支持 VIP 歌曲免费试听；支持无损音质：
+
+进入 `设置` > `播放设置` > `优先播放的音质`。
+
+选择 `flac` 或 `flac24bit`。
+
+<Image
+    src="/images/posts/2025/05/31/lx-music-yin-zhi-she-zhi.gif"
+    alt="LX Music 音质设置"
+/>
+
+**3. 启用下载功能**
+
+进入`设置` > `下载设置`，勾选 `启用下载功能`。
+
+启用后，回到主界面，搜索你想下载的歌曲。
+
+在歌曲列表中，右键点击需要下载的歌曲，选择 `下载` 即可开始下载。
+
+<Image
+    src="/images/posts/2025/05/31/lx-music-xia-zai-she-zhi.gif"
+    alt="LX Music 下载设置"
+/>
+
+通过以上步骤，您可以轻松安装并使用 LX Music，享受全网免费无损音乐资源。LX Music 不仅功能丰富，还支持多平台使用，满足不同用户的需求。使用时请注意导入有效的自定义音源，确保音乐搜索和下载功能正常；同时，保持软件更新，以获得更好的体验和更多新功能。
+
+**参考资料**
+
+1. [LX Music 官网](https://lxmusic.toside.cn/)
+2. [LX Music 桌面版 GitHub](https://github.com/lyswhut/lx-music-desktop)
+3. [LX Music 桌面版说明 - LX Music](https://lxmusic.toside.cn/desktop)
+4. [常见问题 - LX Music](https://lxmusic.toside.cn/desktop/faq)
+5. [洛雪音乐助手下载与使用_lxmusic - CSDN 博客](https://blog.csdn.net/qq_44139306/article/details/135816971)
