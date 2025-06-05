@@ -1,8 +1,7 @@
 ---
 title: Mark Dinn
-meta_title: ""
-image: /images/authors/mark-dinn.webp
-description: this is meta description
+
+image: /images/authors/mark-dinn.webpdescription: this is meta description
 social:
   facebook: https://www.facebook.com/
   twitter: https://www.twitter.com/
