@@ -1,6 +1,6 @@
 ---
 title: "关于我们"
-
+meta_title: "关于我们"
 image: "/images/author.webp"
 draft: false
 
