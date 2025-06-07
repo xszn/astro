@@ -25,10 +25,6 @@ export const getSinglePage = async <C extends CollectionKey>(
     return pageData.draft !== true;
   });
 
-  // const only2025 = removeDrafts.filter((data) => data.id.startsWith("2025/"));
-
-  // return only2025;
-
   return removeDrafts;
 };
 ---

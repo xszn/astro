@@ -39,6 +39,22 @@ const authorsCollection = defineCollection({
   }),
 });
 
+// Columns collection schema
+const columnsCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/columns" }),
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    description: z.string().optional(),
+    date: z.date().optional(),
+    image: z.string().optional(),
+    categories: z.array(z.string()).default(["others"]),
+    authors: z.array(z.string()).default(["Admin"]),
+    tags: z.array(z.string()).default(["others"]),
+    draft: z.boolean().optional(),
+  }),
+});
+
 // Posts collection schema
 const postsCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/posts" }),
@@ -70,6 +86,7 @@ const pagesCollection = defineCollection({
 
 // Export collections
 export const collections = {
+  columns: columnsCollection,
   posts: postsCollection,
   about: aboutCollection,
   authors: authorsCollection,

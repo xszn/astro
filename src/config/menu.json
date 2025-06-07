@@ -5,6 +5,10 @@
       "url": "/"
     },
     {
+      "name": "专栏",
+      "url": "/columns"
+    },
+    {
       "name": "分类",
       "url": "/categories"
     },
