@@ -5,10 +5,6 @@
       "url": "/"
     },
     {
-      "name": "专栏",
-      "url": "/columns"
-    },
-    {
       "name": "分类",
       "url": "/categories"
     },
@@ -17,15 +13,8 @@
       "url": "/tags"
     },
     {
-      "name": "页面",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "作者",
-          "url": "/authors"
-        }
-      ]
+      "name": "作者",
+      "url": "/authors"
     }
   ],
   "footer": [

@@ -7,19 +7,12 @@ import type { CollectionEntry } from "astro:content";
 import config from "@/config/config.json";
 
 const getPosts = (await getSinglePage("posts")) as CollectionEntry<"posts">[];
-const getColumns = (await getSinglePage(
-  "columns",
-)) as CollectionEntry<"columns">[];
 const postsSlug = getPosts.map((item) => item.id);
-const columnsSlug = getColumns.map((item) => item.id);
-
-const postAndColumnSlug = [...postsSlug, ...columnsSlug];
 
 export async function getStaticPaths() {
   const posts = await getSinglePage("posts");
   const pages = await getSinglePage("pages");
-  const columns = await getSinglePage("columns");
-  const allPages = [...pages, ...posts, ...columns];
+  const allPages = [...pages, ...posts];
 
   const paths = allPages.map((page) => ({
     params: {
@@ -41,7 +34,7 @@ const { title, meta_title, description, image } = page.data;
   image={image}
 >
   {
-    postAndColumnSlug.includes(page.id) ? (
+    postsSlug.includes(page.id) ? (
       <PostSingle post={page} />
     ) : (
       <Default data={page} />

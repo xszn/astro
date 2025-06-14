@@ -5,14 +5,26 @@ image: "/images/author.webp"
 draft: false
 
 what_i_do:
-  title: "内容创作"
+  title: "创作类型"
   items:
   - title: "文章撰写"
-    description: "撰写内容不拘"
-  
+    description: "图文并茂。撰写内容不拘"
   - title: "视频编辑"
-    description: "原创影片创作"
-
+    description: "直观易懂。原创影片创作"
 ---
 
 XSZN.org 是一个科学上网教程及软件资源网站。最新热门开源软件推荐，浅显易懂的使用教程。在这里发现与掌握前沿技术。
+
+### 内容创作
+
+**每日推荐**
+
+每天一款软件，发现你的创作与工作。
+
+**推荐周刊**
+
+本周软件精选，值得记忆的推荐合集。
+
+**使用教程**
+
+配全流程教学，快速掌握从这里开始。
