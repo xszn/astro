@@ -2,7 +2,7 @@
 title: "Real-ESRGAN：图片修复工具，AI 提升图像清晰度"
 meta_title: ""
 description: "Real-ESRGAN 是一款基于人工智能的图像和视频超分辨率修复工具，专注于提升现实世界中图像的清晰度和细节表现。它不仅支持普通照片的放大和修复，还针对动漫视频和插画提供了专门优化的模型，适合图像修复、动漫视频增强、老旧照片修复等多种应用场景。Real-ESRGAN 支持 Windows、Linux 和 macOS 等主流系统平台，且提供了跨平台的可执行文件和图形用户界面，方便不同用户群体使用。"
-date: 2025-04-14T08:51:29Z
+date: 2025-04-14
 image: "/images/posts/2025/04/15/real-esrgan.webp"
 categories: ["工具"]
 authors: ["John Doe"]
@@ -14,7 +14,7 @@ Real-ESRGAN 是一款基于人工智能的图像和视频超分辨率修复工�
 
 ## Real-ESRGAN 使用教程
 
-<Notice type="note">视频教程请移步 YouTube 观看《[Real-ESRGAN 使用教程](https://youtu.be/TYLZB24PZyw)》。</Notice>
+<Notice type="tip">视频教程请移步 YouTube 观看《[Real-ESRGAN 使用教程](https://youtu.be/TYLZB24PZyw)》。</Notice>
 
 ### 下载
 
@@ -23,24 +23,22 @@ Real-ESRGAN 是一款基于人工智能的图像和视频超分辨率修复工�
 
 ### 安装
 
-下载完成后，将压缩包解压到指定文件夹，如“Real-ESRGAN”。如果需要处理视频，建议安装 FFmpeg，这样可以方便地提取和合成视频帧，提升视频处理效果和效率。操作简单，方便使用。
-
 <Tabs client:load>
     <Tab name="Real-ESRGAN">
         下载完成后，将压缩包解压到指定文件夹。
     </Tab>
     <Tab name="FFmpeg">
         - 访问 FFmpeg 官网下载安装包。
-        - 解压后将 bin 文件夹路径添加到环境变量 Path。
-        - 最后在命令行输入ffmpeg -version确认安装成功。
+        - 解压后将 `bin` 文件夹路径添加到环境变量 `Path`。
+        - 最后在命令行输入 `ffmpeg -version` 确认安装成功。
     </Tab>
 </Tabs>
 
 ### 使用说明
 
 <Image
-   src="/images/posts/2025/04/15/real-tu-xiang-xiu-fu-xiao-guo-tu.webp"
-   alt="Real-ESRGAN 图像修复效果图"
+   src="/images/posts/2025/04/15/real-esrgan-preview.webp"
+   alt="Real-ESRGAN 图像修复预览"
 />
 
 **图像超分辨率**
@@ -52,13 +50,11 @@ realesrgan-ncnn-vulkan.exe -i input.jpg -o output.png -n realesrgan-x4plus
 ```
 
 其中：
-- `-i`：输入图像
-- `-o`：输出文件
-- `-n`：模型名称（默认为 `realesrgan-x4plus`，也可选择动漫优化模型等）
+- -i：输入图像
+- -o：输出文件
+- -n：模型名称（默认为 realesrgan-x4plus，也可选择动漫优化模型等）
 
-<Notice type="note">更多模型请移步《[Real-ESRGAN 模型库](https://github.com/xinntao/Real-ESRGAN/blob/master/docs/model_zoo.md)》。</Notice>
-
-
+<Notice type="tip">更多模型请移步《[Real-ESRGAN 模型库](https://github.com/xinntao/Real-ESRGAN/blob/master/docs/model_zoo.md)》。</Notice>
 
 **视频超分辨率**
 
@@ -66,7 +62,7 @@ realesrgan-ncnn-vulkan.exe -i input.jpg -o output.png -n realesrgan-x4plus
 
 提前创建文件夹如 `tmp_frames`。
 
-```
+```powershell
 ffmpeg -i onepiece_demo.mp4 -qscale:v 1 -qmin 1 -qmax 1 -vsync 0 tmp_frames/frame%08d.png
 ```
 
@@ -74,7 +70,7 @@ ffmpeg -i onepiece_demo.mp4 -qscale:v 1 -qmin 1 -qmax 1 -vsync 0 tmp_frames/fram
 
 以 Windows 系统为例，提前创建文件夹如 `out_frames`。
 
-```
+```powershell
 realesrgan-ncnn-vulkan.exe -i tmp_frames -o out_frames -n realesr-animevideov3 -s 2 -f jpg
 ```
 
@@ -82,37 +78,34 @@ realesrgan-ncnn-vulkan.exe -i tmp_frames -o out_frames -n realesr-animevideov3 -
 
 首先从输入视频中获得 FPS：
 
-```
+```powershell
 ffmpeg -i onepiece_demo.mp4
 ```
 
 您将得到类似于以下屏幕截图的输出。
 
 <Image 
-   src="/images/posts/2025/04/15/real-huo-qu-shi-pin-fps.webp"
+   src="/images/posts/2025/04/15/real-esrgan-huo-qu-shi-pin-fps.webp"
    alt="Real-ESRGAN 获取视频 FPS"
 />
 
 合并视频：
 
-```
+```powershell
 ffmpeg -r 23.98 -i out_frames/frame%08d.jpg -c:v libx264 -r 23.98 -pix_fmt yuv420p output.mp4
 ```
 
 如果您还想保留原始音频，可以使用以下命令：
 
-```
+```powershell
 ffmpeg -r 23.98 -i out_frames/frame%08d.jpg -i onepiece_demo.mp4 -map 0:v:0 -map 1:a:0 -c:a copy -c:v libx264 -r 23.98 -pix_fmt yuv420p output_w_audio.mp4
 ```
+
+<Notice type="info">你需要替换与原视频相同的 FPS。</Notice>
 
 Real-ESRGAN 作为一款实用的图像和视频超分辨率工具，极大地提升了图像细节和清晰度，适用于照片修复、动漫视频放大、老旧影像修复等多种场景。其跨平台的可执行文件和图形界面降低了使用门槛，支持多种模型和自定义微调，满足不同用户需求。使用时需注意选择合适的模型和放大倍数，视频处理需配合 FFmpeg 等工具。
 
 **参考资料**
 
-1. [Real-ESRGAN GitHub][1]
-2. [Real-ESRGAN 动漫视频模型介绍 - GitHub][2]
-3. [Real-ESRGAN ncnn Vulkan GitHub][3]
-
-[1]: https://github.com/xinntao/Real-ESRGAN/blob/master/README_CN.md
-[2]: https://github.com/xinntao/Real-ESRGAN/blob/master/docs/anime_video_model.md
-[3]: https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan
+1. [Real-ESRGAN GitHub](https://github.com/xinntao/Real-ESRGAN)
+2. [Real-ESRGAN 动漫视频模型介绍 - GitHub](https://github.com/xinntao/Real-ESRGAN/blob/master/docs/anime_video_model.md)
