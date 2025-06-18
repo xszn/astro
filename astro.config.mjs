@@ -31,7 +31,8 @@ export default defineConfig({
         "@/shortcodes/Youtube",
         "@/shortcodes/Tabs",
         "@/shortcodes/Tab",
-        "@/shortcodes/Image"
+        "@/shortcodes/Image",
+        "@/shortcodes/Badge"
       ],
     }),
     mdx(),
