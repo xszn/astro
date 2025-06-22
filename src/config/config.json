@@ -12,7 +12,7 @@
     "logo_text": "行书指南"
   },
   "settings": {
-    "pagination": 7,
+    "pagination": 15,
     "summary_length": 100,
     "visible_pages": 5
   },

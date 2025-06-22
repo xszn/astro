@@ -10,6 +10,7 @@ import { render } from "astro:content";
 import { BiCalendarEdit, BiCategoryAlt } from "react-icons/bi";
 import Comment from "@/components/Comment.astro";
 import Notice from "@/shortcodes/Notice";
+import ScrollToTop from "@/components/ScrollToTop.astro";
 
 const allAuthors = await getSinglePage("authors");
 const posts = await getSinglePage("posts");
@@ -21,7 +22,7 @@ const { title, description, authors, categories, image, date, tags } =
 ---
 
 <section class="section">
-  <div class="container">
+  <div class="container container-page">
     <article class="row justify-center">
       <div class="md:col-12 text-center">
         <h1 set:html={markdownify(title)} class="h1" />
@@ -143,6 +144,7 @@ const { title, description, authors, categories, image, date, tags } =
       </div>
     </article>
     <Comment />
+    <ScrollToTop />
   </div>
 </section>
 
