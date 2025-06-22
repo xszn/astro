@@ -15,7 +15,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 
 <Base title={"作者" + config.site.titleDelimiter}>
   <section class="section">
-    <div class="container text-center">
+    <div class="container container-page text-center">
       <h1 set:text={markdownify("作者")} class="page-heading h2" />
       <Authors authors={currentPosts} />
       <Pagination section={"authors"} currentPage={1} totalPages={totalPages} />

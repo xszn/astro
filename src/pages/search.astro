@@ -17,7 +17,7 @@ const searchList = posts.map((item) => ({
 
 <Base title={`搜索` + config.site.titleDelimiter}>
   <section class="section">
-    <div class="container">
+    <div class="container container-page">
       <SearchBar client:load searchList={searchList} />
     </div>
   </section>

@@ -29,7 +29,7 @@ const title = humanize(tag || "");
 
 <Base title={title + config.site.titleDelimiter || "Tag"}>
   <div class="section">
-    <div class="container">
+    <div class="container container-page">
       <p class="text-center text-2xl mb-4">显示来自</p>
       <h1 class="h2 mb-16 text-center text-primary">{title}</h1>
       <Posts posts={sortedPosts} fluid={false} />
