@@ -9,4 +9,4 @@ social:
   instagram: https://www.instagram.com/
 ---
 
-主要负责有关科学上网教程的内容撰写。
+主要负责有关《每日软件推荐》的内容撰写。
